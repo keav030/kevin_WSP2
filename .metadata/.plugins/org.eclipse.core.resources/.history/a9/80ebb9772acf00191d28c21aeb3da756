@@ -1,0 +1,17 @@
+package ex01_helloworld;
+
+public class HelloWorld {
+	public static void main(String args[]) {
+		Message message1, message2, message3;
+		message1 = new Message();
+		message2 = new Message();
+		message3 = new Message();
+		
+		message1.init("Hola mundanos");
+		message2.init("ai use eclipse laik a ide yava");
+		message3.init("i guan tu tel yu");
+		
+		message1.show();
+		message2.show();
+	}
+}

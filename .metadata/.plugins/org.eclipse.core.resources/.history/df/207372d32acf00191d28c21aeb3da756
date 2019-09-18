@@ -1,0 +1,17 @@
+package ex01_helloworld;
+
+public class HelloWorld {
+	public static void main(String args[]) {
+		Message message1, message2, message3;
+		message1 = new Message();
+		message2 = new Message();
+		message3 = new Message();
+		
+		message1.init("hi my friends");
+		message2.init("i am testing the ecplise ide");
+		message3.init("coming soon...");
+		
+		message1.show();
+		message2.show();
+	}
+}
