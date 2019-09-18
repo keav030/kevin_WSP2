@@ -1,4 +1,4 @@
-package romannumerals;
+package ex07_romannumerals;
 
 public class RomanNumeral {
 	private int value;
