@@ -35,13 +35,15 @@ public class RomanNumeral {
 		
 		
 		//================
-		int j = e;
-		if(values[j]>0 && values[j]<=3) {
-			roman=unit(values[j]);
-		}else if(values[j]==4) {
-			roman="IV";
-		}else if(values[j]>4 && values [j]<9) {
-			
+		if(values.length == 4) {
+			if(values[0]>0 && values[0]<4) {
+				for(i=0;i<values[0];i++) {
+					roman = roman+"M";
+				}				
+			}
+			if(values[1]>0 && values[1]<4) {
+				roman = roman + hundred(values[1]);
+			}else if(values[1])
 		}
 		
 		
@@ -49,17 +51,17 @@ public class RomanNumeral {
 		System.out.println("test: "+ roman);
 	}
 	//=====================
-	public String unit(int num) {
-		String romanI = "";
+	public String hundred(int num) {
+		String romanC = "";
 		for(int i=0;i<num;i++) {
-			romanI = romanI+"I";
+			romanC = romanC+"C";
 		}
-		return romanI;
+		return romanC;
 	//=====================
 	}
 	////////////////////////
 	public static void main(String[] args) {
-		RomanNumeral test = new RomanNumeral(2334);
+		RomanNumeral test = new RomanNumeral(2338);
 		
 		test.Print();
 	}

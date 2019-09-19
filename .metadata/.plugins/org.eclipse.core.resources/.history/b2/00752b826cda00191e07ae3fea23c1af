@@ -9,7 +9,7 @@ public class RomanNumeral {
 	
 	//==================
 	public void Print() {
-		String roman = "";
+		String roman;
 		//[[==============================]]
 		int number = this.value;
 		int numberAux=number;
@@ -33,33 +33,20 @@ public class RomanNumeral {
 		}
 		//[[==============================]]
 		
-		
+		String mil= "m";
+		String mil1 = mil +'m';
+		System.out.println("Test: "+ mil1);
 		//================
-		int j = e;
-		if(values[j]>0 && values[j]<=3) {
-			roman=unit(values[j]);
-		}else if(values[j]==4) {
-			roman="IV";
-		}else if(values[j]>4 && values [j]<9) {
+		if(values[i]>0) {
 			
 		}
 		
 		
-		
-		System.out.println("test: "+ roman);
 	}
-	//=====================
-	public String unit(int num) {
-		String romanI = "";
-		for(int i=0;i<num;i++) {
-			romanI = romanI+"I";
-		}
-		return romanI;
-	//=====================
-	}
+	
 	////////////////////////
 	public static void main(String[] args) {
-		RomanNumeral test = new RomanNumeral(2334);
+		RomanNumeral test = new RomanNumeral(1538);
 		
 		test.Print();
 	}

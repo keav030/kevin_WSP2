@@ -40,8 +40,6 @@ public class RomanNumeral {
 			roman=unit(values[j]);
 		}else if(values[j]==4) {
 			roman="IV";
-		}else if(values[j]>4 && values [j]<9) {
-			
 		}
 		
 		

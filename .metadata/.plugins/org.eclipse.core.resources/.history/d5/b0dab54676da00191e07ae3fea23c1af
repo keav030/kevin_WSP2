@@ -38,9 +38,6 @@ public class RomanNumeral {
 		int j = e;
 		if(values[j]>0 && values[j]<=3) {
 			roman=unit(values[j]);
-		}else if(values[j]==4) {
-			roman="IV";
-		}else if(values[j]>4 && values [j]<9) {
 			
 		}
 		
@@ -59,7 +56,7 @@ public class RomanNumeral {
 	}
 	////////////////////////
 	public static void main(String[] args) {
-		RomanNumeral test = new RomanNumeral(2334);
+		RomanNumeral test = new RomanNumeral(2332);
 		
 		test.Print();
 	}
