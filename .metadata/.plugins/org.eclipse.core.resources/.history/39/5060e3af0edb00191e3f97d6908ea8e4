@@ -47,7 +47,7 @@ public class RomanNumeral {
 		}else if(values[j]==9) {
 			roman="IX";
 		}
-		
+		System.out.println("Test:" +values.length);
 		if(values.length>1) {
 			j--;
 			if(values[j]>0 && values[j]<=3) {
@@ -87,7 +87,7 @@ public class RomanNumeral {
 		
 		
 		
-		System.out.println("to roman numerals: "+ roman);
+		System.out.println("test: "+ roman);
 	}
 	//=====================
 	public String unit(int num, String s) {
