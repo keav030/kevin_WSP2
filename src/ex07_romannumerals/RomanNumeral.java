@@ -1,5 +1,7 @@
 package ex07_romannumerals;
 
+import java.util.Scanner;
+
 public class RomanNumeral {
 	private int value;
 	
@@ -87,7 +89,8 @@ public class RomanNumeral {
 		
 		
 		
-		System.out.println("to roman numerals: "+ roman);
+		System.out.println("	to roman numerals: "+ roman);
+		
 	}
 	//=====================
 	public String unit(int num, String s) {
@@ -111,8 +114,17 @@ public class RomanNumeral {
 	
 	////////////////////////
 	public static void main(String[] args) {
-		RomanNumeral test = new RomanNumeral(3000);
-		
-		test.Print();
+		Scanner read = new Scanner(System.in);
+		while(true) {
+			System.out.println("=======================================");
+			System.out.print("Enter a number between 1 - 3999: ");
+			int number = read.nextInt();
+			if(number<4000 && number>0) {
+				RomanNumeral test = new RomanNumeral(number);
+				test.Print();
+			}else {
+				System.out.println("The number you entered is not within the established range.");
+			}
+		}
 	}
 }
