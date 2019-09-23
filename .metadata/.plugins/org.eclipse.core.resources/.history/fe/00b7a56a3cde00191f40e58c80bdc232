@@ -89,7 +89,7 @@ public class RomanNumeral {
 		
 		
 		
-		System.out.println("	to roman numerals: "+ roman);
+		System.out.println("to roman numerals: "+ roman);
 		
 	}
 	//=====================
@@ -116,10 +116,10 @@ public class RomanNumeral {
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
 		while(true) {
-			System.out.println("=======================================");
-			System.out.print("Enter a number between [1 - 3999]: ");
+			System.out.println("================================");
+			System.out.print("Enter a number between 1 - 3999:");
 			int number = read.nextInt();
-			if(number<4000 && number>0) {
+			if(number<3999 && number>1) {
 				RomanNumeral test = new RomanNumeral(number);
 				test.Print();
 			}else {
