@@ -64,9 +64,8 @@ public class Table {
 	public void print() {
 		int cols = spaces.length;
 		//=========================
-		
-		for(int c=0;c<title.length;c++) {
-			if(printBorders==true) {System.out.print("|");}
+		if(printBorders==true) {System.out.print("|");}
+		for(int c=0;c<title.length;cr++) {
 			if(alignments == null || alignments[c]== LEFT) {
 				System.out.print(title[c]);
 				gap(spaces[c] - title[c].length());
@@ -78,14 +77,15 @@ public class Table {
 				System.out.print(title[c]);
 				gap(spaces[c]-((spaces[c]-title[c].length())/2)-title[c].length());
 			}
-			
+			//gap(spaces[r]-title[r].length());
+			//System.out.print(title[r]);
 		}
 		if(printBorders==true) {System.out.print("|");}
 		System.out.println();
 		
 		
 		
-		if(printBorders==true) {printLine();} 
+		if(printBorders==true) {printLine();} //impresion de linea
 		for(int r=0; r<data.size();r++) {
 			String[] row = data.elementAt(r);
 			for(int c=0; c<cols; c++) {

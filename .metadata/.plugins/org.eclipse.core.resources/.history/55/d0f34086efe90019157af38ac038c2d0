@@ -78,14 +78,15 @@ public class Table {
 				System.out.print(title[c]);
 				gap(spaces[c]-((spaces[c]-title[c].length())/2)-title[c].length());
 			}
-			
+			//gap(spaces[r]-title[r].length());
+			//System.out.print(title[r]);
 		}
 		if(printBorders==true) {System.out.print("|");}
 		System.out.println();
 		
 		
 		
-		if(printBorders==true) {printLine();} 
+		if(printBorders==true) {printLine();} //impresion de linea
 		for(int r=0; r<data.size();r++) {
 			String[] row = data.elementAt(r);
 			for(int c=0; c<cols; c++) {

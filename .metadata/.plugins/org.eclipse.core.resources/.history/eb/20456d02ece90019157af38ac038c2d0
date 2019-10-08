@@ -12,7 +12,7 @@ public class Table {
 	private Vector<String[]> data;
 	private int[] alignments;
 	private boolean printBorders;
-	private String[] title;
+	private Vector<String[]> title;
 	//===========================
 	public Table(int[] spaces) {
 		this.spaces = spaces;
@@ -37,7 +37,7 @@ public class Table {
 		this.alignments = alignments;
 		this.data   = new Vector<String[]>();
 		this.printBorders= printBorders;
-		this.title = title;
+		this.title = new Vector<String[]>();
 	}
 	//==========================
 	public void addRow(String[] row) {
@@ -63,29 +63,16 @@ public class Table {
 	
 	public void print() {
 		int cols = spaces.length;
-		//=========================
 		
-		for(int c=0;c<title.length;c++) {
-			if(printBorders==true) {System.out.print("|");}
-			if(alignments == null || alignments[c]== LEFT) {
-				System.out.print(title[c]);
-				gap(spaces[c] - title[c].length());
-			}else if(alignments[c]== RIGHT) {
-				gap(spaces[c] - title[c].length());
-				System.out.print(title[c]);	
-			}else if(alignments[c]== CENTER) {
-				gap((spaces[c] - title[c].length())/2);
-				System.out.print(title[c]);
-				gap(spaces[c]-((spaces[c]-title[c].length())/2)-title[c].length());
+		for(int r=0;r<title.size();r++) {
+			String[] rowF = title.elementAt(r);
+			for(int c=0;c<cols;c++) {
+				gap(spaces[c]-rowF[c].length());
+				System.out.println(rowF[c]);
 			}
-			
 		}
-		if(printBorders==true) {System.out.print("|");}
-		System.out.println();
 		
-		
-		
-		if(printBorders==true) {printLine();} 
+		if(printBorders==true) {printLine();} //impresion de linea
 		for(int r=0; r<data.size();r++) {
 			String[] row = data.elementAt(r);
 			for(int c=0; c<cols; c++) {
