@@ -1,2 +1,4 @@
-commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>\:DDD</message>\r\n<message>\:D</message>\r\n<message>yeah</message>\r\n<message>remplace roman... por ex07_roman...</message>\r\n<message>prueba</message>\r\n</messages>
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>fractios</message>\r\n<message>primenumbers</message>\r\n<message>\:DDD</message>\r\n<message>\:D</message>\r\n<message>yeah</message>\r\n<message>remplace roman... por ex07_roman...</message>\r\n<message>prueba</message>\r\n</messages>
 eclipse.preferences.version=1
+resourcehistory_graph_split=500,500
+resourcehistory_rev_split=700,300
