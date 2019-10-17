@@ -1,0 +1,45 @@
+package ev01;
+
+import java.util.Scanner;
+import java.util.Vector;
+
+public class Academic {
+	private Vector<AcademicAssignment> aList;
+	
+	public Academic() {
+		aList = new Vector<AcademicAssignment>();
+	}
+	
+	public void addAssignment(AcademicAssignment assignment) {
+		aList.add(assignment);
+	}
+	
+	public void print(){
+		System.out.println("COURSE                QUALIFICATION");
+		for(int i =0;i<aList.size();i++) {
+			AcademicAssignment assignment = aList.elementAt(i);
+			System.out.println("      "+assignment.getNameAsmt()+"    "+assignment.getQualification());
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		Academic list = new Academic();
+		Scanner read = new Scanner(System.in);
+		boolean running = false;
+		System.out.print("Enter Student Name: ");
+		String name = read.nextLine();
+		while(running==false) {
+			System.out.println("----------------------------------------");
+			System.out.println("   "+name);
+			System.out.println("----------------------------------------");
+			list.print();
+			System.out.println("----------------------------------------");
+			System.out.println("Average: ");
+			System.out.println("----------------------------------------");
+			System.out.println("[A]dd   e[X]it");
+		}
+		
+	}
+}
+

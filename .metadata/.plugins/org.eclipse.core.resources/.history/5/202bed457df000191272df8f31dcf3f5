@@ -1,0 +1,8 @@
+package ev01;
+
+public class Academic {
+	private String name;
+	private int average;
+	
+	
+}
