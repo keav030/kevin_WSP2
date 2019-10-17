@@ -84,10 +84,9 @@ public class Table {
 				}
 				
 			}
-			if(printBorders==true) {System.out.print("|");}
-			System.out.println();
 		}	
-		
+		if(printBorders==true) {System.out.print("|");}
+		System.out.println();
 		
 		
 		

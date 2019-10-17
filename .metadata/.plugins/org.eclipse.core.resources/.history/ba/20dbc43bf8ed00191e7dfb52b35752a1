@@ -1,0 +1,17 @@
+package ex10_tableuse;
+
+import ex09_table.Table;
+
+public class TableTest {
+	public static void main(String[] args) {
+		Table multiplicationTable = new Table(new int [] {3,3,3,3,5},
+				new int[] {Table.RIGHT, Table.CENTER, Table.RIGHT, Table.CENTER, Table.RIGHT});
+		
+		for(int i=1;i<10;i++) {
+			multiplicationTable.addRow(new String[] {"8","x",""+i,"=",""+(8*i)});
+		}
+		
+		
+		
+	}
+}

@@ -19,21 +19,18 @@ public class Table {
 		this.alignments = null;
 		this.data   = new Vector<String[]>();
 		this.printBorders= false;
-		this.title = null;
 	}
 	public Table(int[] spaces, int[] alignments) {
 		this.spaces = spaces;
 		this.alignments = alignments;
 		this.data   = new Vector<String[]>();
 		this.printBorders= false;
-		this.title = null;
 	}
 	public Table(int[] spaces, int[] alignments, boolean printBorders) {
 		this.spaces = spaces;
 		this.alignments = alignments;
 		this.data   = new Vector<String[]>();
 		this.printBorders= printBorders;
-		this.title = null;
 	}
 	public Table(int[] spaces, int[] alignments, boolean printBorders, String[] title) {
 		this.spaces = spaces;
@@ -67,27 +64,24 @@ public class Table {
 	public void print() {
 		int cols = spaces.length;
 		//=========================
-		if(title!=null) {
-			if(printBorders==true) {printLine();} 
-			for(int c=0;c<title.length;c++) {
-				if(printBorders==true) {System.out.print("|");}
-				if(alignments == null || alignments[c]== LEFT) {
-					System.out.print(title[c]);
-					gap(spaces[c] - title[c].length());
-				}else if(alignments[c]== RIGHT) {
-					gap(spaces[c] - title[c].length());
-					System.out.print(title[c]);	
-				}else if(alignments[c]== CENTER) {
-					gap((spaces[c] - title[c].length())/2);
-					System.out.print(title[c]);
-					gap(spaces[c]-((spaces[c]-title[c].length())/2)-title[c].length());
-				}
-				
-			}
+		if(printBorders==true) {printLine();} 
+		for(int c=0;c<title.length;c++) {
 			if(printBorders==true) {System.out.print("|");}
-			System.out.println();
-		}	
-		
+			if(alignments == null || alignments[c]== LEFT) {
+				System.out.print(title[c]);
+				gap(spaces[c] - title[c].length());
+			}else if(alignments[c]== RIGHT) {
+				gap(spaces[c] - title[c].length());
+				System.out.print(title[c]);	
+			}else if(alignments[c]== CENTER) {
+				gap((spaces[c] - title[c].length())/2);
+				System.out.print(title[c]);
+				gap(spaces[c]-((spaces[c]-title[c].length())/2)-title[c].length());
+			}
+			
+		}
+		if(printBorders==true) {System.out.print("|");}
+		System.out.println();
 		
 		
 		
