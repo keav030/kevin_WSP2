@@ -17,7 +17,7 @@ public class Student extends Person {
 	public Student() {
 		super();
 		Scanner read = new Scanner(System.in);
-		System.out.print("Code:      "); code= read.nextLong();
+		System.out.print("Code:      "); id= read.nextLong();
 		System.out.print("Program:   "); program=read.next();
 		System.out.print("Semester:  "); semester=read.nextInt();
 		
