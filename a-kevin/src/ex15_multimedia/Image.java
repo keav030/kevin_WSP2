@@ -16,9 +16,7 @@ public class Image extends Multimedia {
 		
 		System.out.println("Width:         "); width = key.nextInt();
 		System.out.println("Height:        "); height = key.nextInt();
-		//transparent = aux.equalsIgnoreCase("y")?true:false;
-		//transparent = aux.equalsIgnoreCase("y");
-		//Condicional para boleano
+		
 		String aux;
 		do {
 			System.out.println("Transparet: y/n"); aux = key.next();
