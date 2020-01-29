@@ -18,7 +18,7 @@ public class MultimediaLibrary {
 	public MultimediaLibrary() {
 		images= new Vector<Image>();
 		audios= new Vector<Audio>();
-		videos=new Vector<Video>();
+		
 	}
 	public void loadImages() {
 		BufferedReader reader;
@@ -69,7 +69,7 @@ public class MultimediaLibrary {
 	public void loadVideo() {
 		BufferedReader reader;
 		try {
-			reader = new BufferedReader(new InputStreamReader(new FileInputStream("resources/videos.csv")));
+			reader = new BufferedReader(new InputStreamReader(new FileInputStream("resources/video.csv")));
 			String row;
 			while ((row = reader.readLine()) != null  ){
 				StringTokenizer items = new StringTokenizer(row,",");
@@ -116,7 +116,7 @@ public class MultimediaLibrary {
 		table.print();
 	}
 	public void printVideo() {
-		Table table = new Table(new int [] {9,40,15,5,10,5,5,5}, null, true);
+		Table table = new Table(new int [] {9,40,15,5,10,5,5}, null, true);
 		
 		for(int i=0; i<videos.size(); i++) {
 			Video vid = videos.elementAt(i);

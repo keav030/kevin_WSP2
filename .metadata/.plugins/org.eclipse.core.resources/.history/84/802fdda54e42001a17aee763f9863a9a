@@ -13,12 +13,11 @@ import ex09_table.Table;
 public class MultimediaLibrary {
 	private Vector<Image>images;
 	private Vector<Audio>audios;
-	private Vector<Video>videos;
 	
 	public MultimediaLibrary() {
 		images= new Vector<Image>();
 		audios= new Vector<Audio>();
-		videos=new Vector<Video>();
+		
 	}
 	public void loadImages() {
 		BufferedReader reader;
@@ -66,31 +65,6 @@ public class MultimediaLibrary {
 		}
 		
 	}
-	public void loadVideo() {
-		BufferedReader reader;
-		try {
-			reader = new BufferedReader(new InputStreamReader(new FileInputStream("resources/videos.csv")));
-			String row;
-			while ((row = reader.readLine()) != null  ){
-				StringTokenizer items = new StringTokenizer(row,",");
-				long size = Long.parseLong(items.nextToken());
-				String name = items.nextToken();
-				String date = items.nextToken();
-				String format = items.nextToken();
-				String duration = items.nextToken();
-				long resolution = Long.parseLong(items.nextToken());
-				long fps = Long.parseLong(items.nextToken());
-				boolean closecaption = Boolean.parseBoolean(items.nextToken());
-				videos.add(new Video(size,name,date,format,duration,resolution,fps,closecaption));
-				
-			}
-			
-			
-		} catch (IOException e) {
-			
-		}
-		
-	}
 	
 	//----------------------------------
 	public void printImages() {
@@ -105,7 +79,7 @@ public class MultimediaLibrary {
 		table.print();
 	}
 	public void printAudio() {
-		Table table = new Table(new int [] {9,40,15,5,10,30,5}, null, true);
+		Table table = new Table(new int [] {9,30,15,5,10,30,5}, null, true);
 		
 		for(int i=0; i<audios.size(); i++) {
 			Audio aud = audios.elementAt(i);
@@ -115,26 +89,14 @@ public class MultimediaLibrary {
 		}
 		table.print();
 	}
-	public void printVideo() {
-		Table table = new Table(new int [] {9,40,15,5,10,5,5,5}, null, true);
-		
-		for(int i=0; i<videos.size(); i++) {
-			Video vid = videos.elementAt(i);
-			table.addRow(new String[] {""+vid.getSize(),vid.getName(),vid.getDate(),
-					vid.getFormat(),vid.getDuration(),""+vid.getResolution(),""+vid.getFps(),""+vid.isClosecaption()});		
-		}
-		table.print();
-	}
 	
 	//----------------------------
 	public static void main(String[] args) {
 		MultimediaLibrary ml = new MultimediaLibrary();
 		ml.loadImages();
 		ml.loadAudio();
-		ml.loadVideo();
 		ml.printImages();
 		ml.printAudio();
-		ml.printVideo();
 	}
 	
 	

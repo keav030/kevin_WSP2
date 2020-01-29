@@ -69,7 +69,7 @@ public class MultimediaLibrary {
 	public void loadVideo() {
 		BufferedReader reader;
 		try {
-			reader = new BufferedReader(new InputStreamReader(new FileInputStream("resources/videos.csv")));
+			reader = new BufferedReader(new InputStreamReader(new FileInputStream("resources/video.csv")));
 			String row;
 			while ((row = reader.readLine()) != null  ){
 				StringTokenizer items = new StringTokenizer(row,",");

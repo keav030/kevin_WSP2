@@ -11,8 +11,8 @@ public class Video extends Multimedia {
 	private boolean closecaption;
 	//---------------------------------------------------
 	//Constructor
-	public Video(long size, String name, String date, String format,String duration, long resolution, long fps, boolean closecaption) {
-		super(size, name, date, format);
+	public Video(String duration, long resolution, long fps, boolean closecaption) {
+		super();
 		this.duration = duration;
 		this.resolution = resolution;
 		this.fps = fps;
@@ -36,38 +36,6 @@ public class Video extends Multimedia {
 			closecaption = false;
 		}
 		System.out.println("====================================");
-	}
-
-	public String getDuration() {
-		return duration;
-	}
-
-	public void setDuration(String duration) {
-		this.duration = duration;
-	}
-
-	public long getResolution() {
-		return resolution;
-	}
-
-	public void setResolution(long resolution) {
-		this.resolution = resolution;
-	}
-
-	public long getFps() {
-		return fps;
-	}
-
-	public void setFps(long fps) {
-		this.fps = fps;
-	}
-
-	public boolean isClosecaption() {
-		return closecaption;
-	}
-
-	public void setClosecaption(boolean closecaption) {
-		this.closecaption = closecaption;
 	}
 	
 }
