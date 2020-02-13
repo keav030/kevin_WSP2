@@ -20,8 +20,8 @@ public class Circle extends Shape{
 		return Math.PI*(radius*radius);
 	}
 	
-	public double getParameter() {
-		return Math.PI*(radius*radius);
+	public double getPerimeter() {
+		return Math.PI*2*radius;
 	}
 	
 }

@@ -1,0 +1,49 @@
+package ex21_sapiens;
+
+import java.util.Scanner;
+
+public class Sapiens {
+	 public static int selectSubject() {
+	        Scanner scan = new Scanner(System.in);
+	        System.out.println("Select one of below subjects:");
+	        System.out.println("1. Programming");
+	        System.out.println("2. Calculus");
+	        System.out.println("3. English");
+	        System.out.print  ("?");
+	        int index = scan.nextInt();
+	        return index-1;
+	    }
+	    //--------------------------------------------------------------
+	    public static void main(String[] args) {
+	        Subject    subjects[] = new Subject[3];
+	        Scanner scan = new Scanner(System.in);
+	        
+	        subjects[0] = new Programming();
+	        subjects[1] = new Calculus();
+	        subjects[2] = new English();
+
+	        boolean keepRunning = true;
+	        while (keepRunning) {
+	            System.out.println("=========================");
+	            System.out.println("  1. Grade subject");
+	            System.out.println("  2. Report subject");
+	            System.out.println("  0. Exit");
+	            System.out.println("=========================");
+	            System.out.print  ("?");
+	            int option = scan.nextInt();
+	            int index;
+	            switch(option) {
+	            case 1:    
+	                index = selectSubject();
+	                subjects[index].grade();
+	                break;
+	            case 2:    
+	                index = selectSubject();
+	                subjects[index].report();
+	                break;
+	            case 0:
+	                keepRunning = false;
+	            }
+	        }
+	    }
+}

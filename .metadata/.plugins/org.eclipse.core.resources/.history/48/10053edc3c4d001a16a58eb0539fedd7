@@ -1,0 +1,17 @@
+package ex21_sapiens;
+
+public class English extends Subject {
+
+	@Override
+	public void grade() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void report() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

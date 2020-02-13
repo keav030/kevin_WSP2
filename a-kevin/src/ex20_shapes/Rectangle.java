@@ -13,7 +13,7 @@ public class Rectangle extends Shape {
 	public double getArea() {
 		return width*height;
 	}
-	public double getParameter() {
+	public double getPerimeter() {
 		return (width*2)+(height*2);
 	}
 	

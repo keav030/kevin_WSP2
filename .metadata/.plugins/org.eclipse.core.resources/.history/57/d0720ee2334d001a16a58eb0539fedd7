@@ -1,0 +1,19 @@
+package ex20_shapes;
+
+public class ShapeCalculus {
+	public static void main(String[] args) {
+		Shape shape;
+		
+		shape = new Rectangle("cms", 20, 15);
+        System.out.println(shape.getArea()+shape.getUnit()+"²");
+        System.out.println(shape.getPerimeter()+shape.getUnit());
+        
+        shape = new Triangle("inchs", 150, 80);
+        System.out.println(shape.getArea()+shape.getUnit()+"²");
+        System.out.println(shape.getPerimeter()+shape.getUnit());
+
+        shape = new Circle("mts", 25);
+        System.out.println(shape.getArea()+shape.getUnit()+"²");
+        //System.out.println(shape.getPerimeter()+shape.getUnit());
+	}
+}

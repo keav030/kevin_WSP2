@@ -9,7 +9,7 @@ public class Shape {
 		return 0;
 	}
 	
-	public double getParameter() {
+	public double getPerimeter() {
 		return 0;
 		
 	}

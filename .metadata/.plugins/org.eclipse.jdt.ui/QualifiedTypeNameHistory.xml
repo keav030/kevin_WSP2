@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
-<fullyQualifiedTypeName name="java.util.Random"/>
-<fullyQualifiedTypeName name="ex10_tableuse.BingoTable"/>
-<fullyQualifiedTypeName name="java.util.Vector"/>
-<fullyQualifiedTypeName name="ev01.AcademicAssignment"/>
-<fullyQualifiedTypeName name="ex09_table.Table"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="hw07_accountingbook.AccountingBook"/>
-<fullyQualifiedTypeName name="ex13_personalinformation.Professor"/>
-<fullyQualifiedTypeName name="ex13_personalinformation.Administrative"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="ex10_tableuse.BingoTable"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="ev01.AcademicAssignment"/>
+    <fullyQualifiedTypeName name="ex09_table.Table"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="hw07_accountingbook.AccountingBook"/>
+    <fullyQualifiedTypeName name="ex13_personalinformation.Professor"/>
+    <fullyQualifiedTypeName name="ex13_personalinformation.Administrative"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="ex20_shapes.Triangle"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="ex21_sapiens.English"/>
 </qualifiedTypeNameHistroy>
